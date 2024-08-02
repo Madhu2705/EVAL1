@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:#ff6347
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    color: #555;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff6347;
+}
+
+.navbar-nav .nav-link i {
+    font-size: 1.2rem;
+}
+
+.order-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.order-icon {
+    width: 50px;
+    margin-right: 10px;
+    height: 70px;
+}
+
+.order-card .d-flex div {
+    align-items: center;
+}
+
+.order-card .text-right p {
+    margin: 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+}
+
+footer h5 {
+    font-weight: bold;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ff6347;
+    text-decoration: underline;
+}
+
+footer .fa {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+footer .fa-facebook {
+    color: #3b5998;
+}
+
+footer .fa-twitter {
+    color: #1da1f2;
+}
+
+footer .fa-linkedin {
+    color: #0077b5;
+}
+
+footer .text-center p {
+    margin: 0;
+}
+
+footer .container {
+    max-width: 960px;
+}
