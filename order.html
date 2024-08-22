@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart </title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+    <header class="bg-light py-3">
+        <div class="container">
+            <nav class="navbar navbar-light navbar-expand-lg">
+                <a class="navbar-brand" href="#"><img src="tastebud logo.png" width="120px" height="70px"></a>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Mobile app</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                 
+            </nav>
+        </div>
+    </header>
+<main class="container my-5">
+    <div class="cart-item row align-items-center">
+        <div class="col-md-2">
+            <img src="food.jpeg" alt="salad">
+
+        </div>
+        <div class="col-md-4">
+            <h5>Salad</h5>
+            <p>Fresh and Healthy salad</p>
+        </div>
+        <div class="col-md-2">
+            <input type="number" class="form-control" value="1" min="1">
+
+        </div>
+        <div class="col-md-2">
+            <p>&nbsp;&nbsp;&nbsp;Rs.120.00</p>
+        </div>
+        <div class="col-md-2 text-right">
+            <button class="btn btn-danger">Remove</button>
+        </div>
+    </div>
+    <div class="cart-item row align-items-center">
+        <div class="col-md-2">
+            <img src="pizza.jpeg" alt="pizza">
+
+        </div>
+        <div class="col-md-4">
+            <h5>Pizza</h5>
+            <p>Delicious cheesy pizza </p>
+        </div>
+        <div class="col-md-2">
+            <input type="number" class="form-control" value="1" min="1">
+
+        </div>
+        <div class="col-md-2">
+            
+            <p>&nbsp;&nbsp;&nbsp;Rs200.00</p>
+        </div>
+        <div class="col-md-2 text-right">
+            <button class="btn btn-danger">Remove</button>
+        </div>
+    </div>
+    <div class="cart-summary mt-5 p-4">
+        <h4>Order Summary</h4>
+        <div class="d-flex justify-content-between">
+            <p>Subtotal</p>
+            <p>Rs320.00</p>
+        </div>
+        <div class="d-flex justify-content-between">
+            <p>Delivery Charges</p>
+            <p>Rs100.00</p>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between">
+            <h5>Total</h5>
+            <p>Rs420.00</p>
+        </div>
+        <button class="btn btn-primary btn-block mt-4">Proceed to Payment</button>
+    </div>
+</main>
+    
