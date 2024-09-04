@@ -3,50 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Track order</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="track.css"> 
+    <title>Order Tracking</title>
+    <link rel="stylesheet" href="track.css">
+    
 </head>
 <body>
-    <header class="bg-light py-3">
-        <div class="container">
-            <nav class="navbar navbar-light navbar-expand-lg">
-                <a class="navbar-brand" href="#"><img src="tastebud logo.png" width="120px" height="70px"></a>
+    
+    <video autoplay muted loop id="myVideo">
+        <source src="video1.mp4" type="video/mp4">
+      </video>
+    
+    <div class="order-status">
+        <h2>ORDER STATUS</h2>
+        <ul>
             
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Mobile app</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
-                </ul>
-            </div>  
-          </nav>
-        </div>
-    </header>
-    <main class="container my-5">
-        <h2 class="text-center">Track Your Order</h2>
-        <form class="track-order">
-            <div class="form-group">
-                <label for="orderNumber">Order Number:</label>
-                <input type="text" class="form-control" id="orderNumber" placeholder="Enter your order number" >
-            </div>
-            <div class="form-group">
-                <label for="email">Email Address:</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email" >
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Track Order</button>
-        </form>
+            <li>
+                <span class="dot received"></span>
+                <div>
+                    <p>Order Received</p>
+                    <small>8:30 am, Jan 31, 2024</small>
+                </div>
+            </li><br>
+            <li>
+                <span class="dot on-the-way"></span>
+                <div>
+                    <p>On The Way <span class="tracking-label">Tracking</span></p>
+                    <small>10:23 am, Jan 31, 2024</small>
+                </div>
+            </li><br>
+            <li>
+                <span class="dot delivered"></span>
+                <div>
+                    <p>Delivered</p>
+                </div>
+            </li>
+        </ul>
+        <button class="confirm-btn">Make a payment</button><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="hi.png" class="img">
+    </div>
+    
 
-        <div class="order mt-5">
-           
-            <h3 class="text-center">Order Status</h3><br>
-            <div class="status">
-                <p><b>Order Number:</b> 54788</p>
-                <p><b>Estimated Delivery Time:</b> 20minutes</p>
-                <p><b>Current Status:</b> Food preparing</p>
+    <div class="tracking-map">
+        <button class="back-btn" ><a href="menu.html">Back</a></button>
+        <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55015.819797634154!2d76.55227744905126!3d30.478916124869034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fdc7c202e6489%3A0xf2b1d67562f68349!2sRajpura%2C%20Punjab%20140401!5e0!3m2!1sen!2sin!4v1725009278062!5m2!1sen!2sin" 
+        width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="car-tracker">
+                <img src="car.jpeg" alt="Car" />
+                <p>3 km away</p>
             </div>
-        </div>
-    </main>
+        </div><br><br><br><br><br>
+        <br>
+        <p class="tracking-note">As soon as you hear the sound of the door, your order has come.</p>
+        <div class="check-icon">✔</div>
+    </div>
+    
+
+     
+   
 </body>
 </html>
