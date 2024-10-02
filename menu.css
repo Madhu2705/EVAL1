@@ -243,6 +243,35 @@ section#menu {
     height: auto;
 }
 
+button {
+    margin: 0 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+span {
+    font-size: 18px;
+}
+.hi h2{
+    font-size: 100;
+    font-weight: bold;
+    text-decoration: double;
+}
+.calorie {
+    background-color: red;
+    color: white; 
+    text-decoration: none; 
+              
+    
+}
+
+.calorie:hover {
+    background-color: #45a049;
+    text-decoration: none; 
+}
+
+
+
 
 
 
