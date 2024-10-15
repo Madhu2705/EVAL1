@@ -198,11 +198,11 @@ section#menu {
     background-color: #f9f9f9;
 }
 
-.menu-category {
+.menu {
     margin-bottom: 2rem;
 }
 
-.menu-category h3 {
+.menu h3 {
     background-color: #fd0301;
     color: black;
     padding: 0.5rem;
@@ -211,25 +211,25 @@ section#menu {
     justify-content: center;
 }
 
-.menu-category ul {
+.menu ul {
     list-style-type: none;
     padding: 0;
 }
 
-.menu-category ul li {
+.menu ul li {
     border-bottom: 1px solid #ddd;
     padding: 1rem 0;
 }
 
-.menu-category ul li h4 {
+.menu ul li h4 {
     margin: 0;
 }
 
-.menu-category ul li p {
+.menuul li p {
     margin: 0.5rem 0;
 }
 
-.menu-category ul li span {
+.menu ul li span {
     font-weight: bold;
     color: black;
 }

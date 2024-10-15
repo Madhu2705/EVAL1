@@ -1,15 +1,14 @@
-function increase(id) {
-    let element = document.getElementById(id);
-    let value = parseInt(element.innerText);
-    value++;
-    element.innerText = value;
+function increase(itemId) {
+  const item = document.getElementById(itemId);
+  let currentValue = parseInt(item.textContent); 
+  item.textContent = currentValue + 1;
 }
 
-function decrease(id) {
-    let element = document.getElementById(id);
-    let value = parseInt(element.innerText);
-    if (value > 0) {
-        value--;
-    }
-    element.innerText = value;
+
+function decrease(itemId) {
+  const item = document.getElementById(itemId);
+  let currentValue = parseInt(item.textContent); 
+  if (currentValue > 0) { 
+      item.textContent = currentValue - 1; 
+  }
 }
