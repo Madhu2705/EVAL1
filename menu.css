@@ -102,6 +102,7 @@ ul.social-icon {
     
 }
 
+
 .footer-top {
     background: #fff7f5;
     padding: 30px 0;
@@ -224,6 +225,13 @@ section#menu {
 .menu ul li h4 {
     margin: 0;
 }
+#quantityInput {
+    width: 50px;
+    padding: 5px;
+    margin: 10px 0;
+    text-align: center;
+}
+
 
 .menuul li p {
     margin: 0.5rem 0;
@@ -252,23 +260,39 @@ button {
 span {
     font-size: 18px;
 }
-.hi h2{
-    font-size: 100;
-    font-weight: bold;
-    text-decoration: double;
-}
-.calorie {
-    background-color: red;
-    color: white; 
-    text-decoration: none; 
-              
-    
+
+
+.item-container {
+    display: flex;
+   
+    margin: 10px 0; /* Space between items */
 }
 
-.calorie:hover {
-    background-color: #45a049;
-    text-decoration: none; 
+.item-name {
+    width: 150px; /* Fixed width for names to align them */
+    font-weight: bold;
+    margin-right: 10px;
+     /* Space between name and buttons */
 }
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px; /* Equal space on both sides of the button */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+   
+}
+
+.quantity-value {
+    width: 30px;
+    text-align: center; /* Center-align the quantity number */
+    font-weight: bold;
+}
+
+
+
 
 
 
