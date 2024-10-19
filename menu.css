@@ -251,45 +251,24 @@ section#menu {
     height: auto;
 }
 
-button {
-    margin: 0 10px;
-    padding: 5px 10px;
-    font-size: 16px;
-}
-
-span {
-    font-size: 18px;
-}
 
 
-.item-container {
+
+
+.menu-container {
     display: flex;
-   
-    margin: 10px 0; /* Space between items */
+    flex-direction: row;
+    gap: 20px; /* Space between menu items */
 }
 
-.item-name {
-    width: 150px; /* Fixed width for names to align them */
-    font-weight: bold;
-    margin-right: 10px;
-     /* Space between name and buttons */
+.menu-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.quantity-btn {
-    width: 30px;
-    height: 30px;
-    margin: 0 5px; /* Equal space on both sides of the button */
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    cursor: pointer;
-   
-}
-
-.quantity-value {
-    width: 30px;
-    text-align: center; /* Center-align the quantity number */
-    font-weight: bold;
-}
 
 
 

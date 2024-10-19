@@ -1,7 +1,14 @@
-const cartList = document.querySelector('.cart-list');
-const totalPriceSpan = document.getElementById('total-price');
-
-// Function to add an item to the cart
-function addToCart(itemName, itemPrice) {
-  // Create a list item element
-  const listItem = document.createElement('
+const modal = document.getElementById('deliveryModal');
+const openModalButton = document.getElementById('deliverHere');
+const closeButton = document.querySelector('.close-button');
+openModalButton.onclick = function() {
+  modal.style.display = 'flex';
+};
+closeButton.onclick = function() {
+  modal.style.display = 'none';
+};
+window.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+};

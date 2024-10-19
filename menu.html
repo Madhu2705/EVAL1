@@ -28,7 +28,7 @@
                 </li>
                 <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
       <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
-      <li class="nav-item"><a class="nav-link" href="order.html">My Cart</a></li>
+      <li class="nav-item"><a class="nav-link" href="order.html">Add address</a></li>
       <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
       <li class="nav-item"><a class="nav-link" href="#">Mobile App</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Contact Us</a>
@@ -93,57 +93,142 @@
 </div>
 <br><br>
 
+ <div class="menu-container">
+<div class="menu-item">
+  <h4>Sandwich</h4>
+  <p>Price: ₹200</p>
+  <button class="add-to-cart" data-name="sandwich" data-price="200">Add to Cart</button>
+</div>
+
+<div class="menu-item">
+  <h4>Pasta</h4>
+  <p>Price: ₹350</p>
+  <button class="add-to-cart" data-name="Pasta" data-price="350">Add to Cart</button>
+</div>
+
+<div class="menu-item">
+  <h4>Burger</h4>
+  <p>Price: ₹150</p>
+  <button class="add-to-cart" data-name="Burger" data-price="150">Add to Cart</button>
+</div>
+
+<div class="menu-item">
+  <h4>Cake</h4>
+  <p>Price: ₹500</p>
+  <button class="add-to-cart" data-name="Cake" data-price="500">Add to Cart</button>
+</div>
+<div class="menu-item">
+  <h4>Noodle</h4>
+  <p>Price: ₹320</p>
+  <button class="add-to-cart" data-name="Noodle" data-price="320">Add to Cart</button>
+</div>
+<div class="menu-item">
+  <h4>Pizza</h4>
+  <p>Price: ₹749</p>
+  <button class="add-to-cart" data-name="Pizza" data-price="749">Add to Cart</button>
+</div>
+<div class="menu-item">
+  <h4>Momos</h4>
+  <p>Price: ₹140</p>
+  <button class="add-to-cart" data-name="Momos" data-price="140">Add to Cart</button>
+</div>
+<div class="menu-item">
+  <h4>Taco</h4>
+  <p>Price: ₹210</p>
+  <button class="add-to-cart" data-name="Fried Momos" data-price="210">Add to Cart</button>
+</div>
+<div class="menu-item">
+  <h4>Pastry</h4>
+  <p>Price: ₹80</p>
+  <button class="add-to-cart" data-name="Pastry" data-price="80">Add to Cart</button>
+</div>
+<div class="menu-item">
+  <h4>Fries</h4>
+  <p>Price: ₹250</p>
+  <button class="add-to-cart" data-name="Chilli garlic noodle" data-price="250">Add to Cart</button>
+</div></div>
+
+
+<center>
+<h1 class="h1">It's My Cart</h1>
+
+<div id="card-section">
+  <div class="col-md-4">
+    <div class="card p-4 shadow">
+      <img src="pizza.jpeg" width="85px" height="50px">
+      <h5>Tastebud</h5>
+      <p>Punjab</p>
+      <ul class="list-group mb-3">
+        
+      </ul>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" value="" id="noContactDelivery">
+        <label class="form-check-label" for="noContactDelivery">
+          Opt in for No-contact Delivery
+        </label>
+        <p class="text-muted small">Unwell, or avoiding contact? Please select no-contact delivery. Partner will safely place the order outside your door.</p>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-outline-danger w-100" id="tr">
+          <a href="track.html">Track Order</a>
+        </button>
+      </div>
+      <div class="d-flex justify-content-between">
+        <h6>TO PAY</h6>
+        <span id="total-price">₹0</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  
+  let cartItems = [];
 
   
-<center>
-  <div class="item-container">
-    <span class="item-name">Mix Veg:</span>
-    <button class="quantity-btn" onclick="decrease('mixVeg')">-</button>
-    <span id="mixVeg" class="quantity-value">0</span>
-    <button class="quantity-btn" onclick="increase('mixVeg')">+</button>
-</div>
+  function updateCart() {
+    const cartList = document.querySelector('.list-group');
+    cartList.innerHTML = ''; 
+    
+    cartItems.forEach(item => {
+      const cartItemHTML = `
+        <li class="list-group-item d-flex justify-content-between">
+          <div>
+            <h6>${item.name} <small>(Quantity: ${item.quantity})</small></h6>
+          </div>
+          <span>₹${item.price * item.quantity}</span>
+        </li>
+      `;
+      cartList.insertAdjacentHTML('beforeend', cartItemHTML);
+    });
 
-<div class="item-container">
-    <span class="item-name">Grilled Sandwich:</span>
-    <button class="quantity-btn" onclick="decrease('GrilledSandwich')">-</button>
-    <span id="GrilledSandwich" class="quantity-value">0</span>
-    <button class="quantity-btn" onclick="increase('GrilledSandwich')">+</button>
-</div>
+    
+    const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    document.getElementById('total-price').innerText = `₹${totalPrice}`;
+  }
 
-<div class="item-container">
-    <span class="item-name">redsaucepasta:</span>
-    <button class="quantity-btn" onclick="decrease('redsaucepasta')">-</button>
-    <span id="redsaucepasta" class="quantity-value">0</span>
-    <button class="quantity-btn" onclick="increase('redsaucepasta')">+</button>
-</div>
-<div class="item-container">
-  <span class="item-name">White sauce pasta:</span></span>
-  <button class="quantity-btn" onclick="decrease('whitesaucepasta')">-</button>
-  <span id="whitesaucepasta" class="quantity-value">0</span>
-  <button class="quantity-btn" onclick="increase('whitesaucepasta')">+</button>
-</div>
+  
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', () => {
+      const itemName = button.getAttribute('data-name');
+      const itemPrice = parseInt(button.getAttribute('data-price'));
 
-<div class="item-container">
-  <span class="item-name">Tandoori Pasta:</span>
-  <button class="quantity-btn" onclick="decrease('tandooripasta')">-</button>
-  <span id="tandooripasta" class="quantity-value">0</span>
-  <button class="quantity-btn" onclick="increase('tandooripasta')">+</button>
-</div>
+      
+      const existingItem = cartItems.find(item => item.name === itemName);
 
-<div class="item-container">
-  <span class="item-name">Pizza:</span>
-  <button class="quantity-btn" onclick="decrease('pizza')">-</button>
-  <span id="pizza" class="quantity-value">0</span>
-  <button class="quantity-btn" onclick="increase('pizza')">+</button>
-</div>
-<div class="cart-container" id="cart">
-  <!-- Cart will be updated dynamically -->
-</div>
+      if (existingItem) {
+        existingItem.quantity += 1; 
+      } else {
+        cartItems.push({ name: itemName, price: itemPrice, quantity: 1 }); 
+      }
+
+      updateCart(); 
+    });
+  });
+</script>
 
 </center>
-
-
-
 <section id="menu">
   <center><h2>Our Mostly ordered items</h2></center>
   <div class="menu">
@@ -160,10 +245,7 @@
               <span>Rs180.00</span>
           </li>
       </ul>
-  </div>
-  
-
-  <div class="menu">
+  </div><div class="menu">
       <h3>Main Courses</h3>
       <ul>
           <li>
